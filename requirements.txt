@@ -1,0 +1,5 @@
+pymongo
+pymongo[srv]
+dnspython
+tweepy
+twitter
