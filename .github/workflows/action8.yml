@@ -24,10 +24,10 @@ jobs:
           
       - name: execute py script # run readTweets.py to get the latest data
         env:
-          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-          OAUTH_TOKEN: ${{ secrets.OAUTH_TOKEN }}
-          OATH_TOKEN_SECRET: ${{ secrets.OATH_TOKEN_SECRET }}
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY2 }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET2 }}
+          OAUTH_TOKEN: ${{ secrets.OAUTH_TOKEN2 }}
+          OATH_TOKEN_SECRET: ${{ secrets.OATH_TOKEN_SECRET2 }}
           MONGOD_CONNECT: ${{ secrets.MONGOD_CONNECT }}
           NEWSAPI: ${{ secrets.NEWSAPI }}
 
