@@ -31,7 +31,7 @@ num_records = 1
 since_id_new = -1
 since_id_old = 0
 print('1')
-while(since_id_new != since_id_old or num_records<=1500):
+while(since_id_new != since_id_old):
     since_id_old = since_id_new
     search_results = rest_api.search.tweets(count=count,q=q)
     statuses = search_results["statuses"]
@@ -50,26 +50,7 @@ q = "@AlvaroUribeVel"                               #@UCDemocratico  @AlvaroUrib
 num_records = 1
 since_id_new = -1
 since_id_old = 0
-while(since_id_new != since_id_old or num_records<=1500):
-    since_id_old = since_id_new
-    search_results = rest_api.search.tweets(count=count,q=q)
-    statuses = search_results["statuses"]
-    since_id_new = statuses[-1]['id']
-    
-    for statuse in statuses:
-        try:
-            tweet_collection.insert_one(statuse)
-            num_records = num_records + 1
-            pprint(statuse['created_at']) # print the date of the collected tweets
-        except:
-            pass
-
-q = "Matarife"                               #@UCDemocratico  @AlvaroUribeVel Matarife define the keywords, tweets contain election
-
-num_records = 1
-since_id_new = -1
-since_id_old = 0
-while(since_id_new != since_id_old or num_records<=1500):
+while(since_id_new != since_id_old):
     since_id_old = since_id_new
     search_results = rest_api.search.tweets(count=count,q=q)
     statuses = search_results["statuses"]
