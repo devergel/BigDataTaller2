@@ -1,4 +1,4 @@
-name: action2
+name: action3
 
 on:
   schedule:
