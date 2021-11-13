@@ -31,5 +31,4 @@ jobs:
           MONGOD_CONNECT: ${{ secrets.MONGOD_CONNECT }}
           NEWSAPI: ${{ secrets.NEWSAPI }}
 
-        run: python readTweets.py
-          python collectNews.py
+        run: python readTweets2.py
