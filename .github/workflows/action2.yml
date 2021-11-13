@@ -2,7 +2,7 @@ name: action2
 
 on:
   schedule:
-    - cron: '0 */4 * * *' # runs at 12:00 UTC everyday
+    - cron: '30 0 * * *' # runs at 12:00 UTC everyday
 
 jobs:
   build:
